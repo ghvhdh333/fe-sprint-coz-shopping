@@ -1,0 +1,44 @@
+.listbox {  /* .listbox 나중에 삭제할 것 */
+    border: 1px solid tomato;
+    width: 264px;
+    height: 264px;
+    border-radius: 12px;
+}
+
+.item_img_div {
+    position: relative;
+}
+
+.item_img {
+    width: 264px;
+    height: 210px;
+    border-radius: 12px;
+}
+
+.bookmark_icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+
+    top: 174px;
+    left: 228px;
+}
+
+.itemName {
+    list-style: none;
+    padding-top: 6px;
+    font-size: 16px;
+    font-weight: 800;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.discount {
+    color: #452CDD;
+}
+
+.price, .likedNum {
+    text-align: right;
+}

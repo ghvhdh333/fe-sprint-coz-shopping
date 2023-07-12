@@ -1,0 +1,11 @@
+.footer {
+    background-color: #ffffff;
+    border-top: 1px solid #000000;  /* 명암 10% 주는 방법 찾기...ㅠ */
+}
+
+.footer_text {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: #888888;
+}
