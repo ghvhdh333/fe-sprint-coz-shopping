@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
 import { BrowserRouter, Routers, Router } from 'react-router-dom';
-import './App.css';
 import './base.css';
 
 import Header from './components/header';
