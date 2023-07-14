@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Route의 Link 는 html의 <a>로 인식한다. */
+a {
+    text-decoration: none;
+    color: black;
+}

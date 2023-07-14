@@ -1,6 +1,6 @@
 header {
     background-color: #ffffff;
-    box-shadow: 0 0 8px 0 #000000;  /* 명암 10%줘야됨.. */
+    box-shadow: 0 0 8px 0 #888888;
     
     padding: 25px 76px;
 
@@ -12,17 +12,20 @@ header {
 .header_left_section {
     display: flex;
     align-items: center;
+    
 }
 
 .logo_icon {
     width: 55px;
     height: 30px;
+    text-decoration: none;
 }
 
 .logo_name {
     font-size: 32px;
     font-weight: 700;
     padding-left: 12px;
+    color: black;
 }
 
 .bars {
