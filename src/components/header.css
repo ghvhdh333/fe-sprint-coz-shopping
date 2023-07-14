@@ -32,3 +32,8 @@ header {
     width: 34px;
     height: 24px;
 }
+
+/* bars에 hover하면 커서 모양 바꿈 */
+.bars:hover {
+    cursor: pointer;
+}

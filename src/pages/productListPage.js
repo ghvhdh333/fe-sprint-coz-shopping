@@ -1,6 +1,5 @@
 import Product from "../components/itemBox/product"
 import React, { useState, useEffect } from "react"
-import Filter from "../components/filter"
 import "./productListPage.css"
 
 export default function ProductListPage () {
@@ -22,8 +21,6 @@ export default function ProductListPage () {
         // URL에 get 요청을 보냈지만 성공적으로 데이터를 가져오지 못한 경우 Error를 발생시킨다.
         .catch(error => console.log('Internet Server Error', error))
     }, [])  // [] <- 첫 렌더링에만 useEffect가 실행된다.
-
-
 
     return (
         <main className="main">
