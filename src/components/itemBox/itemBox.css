@@ -1,9 +1,13 @@
-.listbox {  /* .listbox 나중에 삭제할 것 */
+/* 맨위의 .listbox는 나중에 삭제할 것 */
+/* .listbox {  
     border: 1px solid tomato;
     width: 264px;
     height: 264px;
     border-radius: 12px;
-    margin-bottom: 12px;   /* 이거는 삭제 하면 안됨 */
+} */
+
+.listbox {  
+    margin-bottom: 12px;
 }
 
 .item_img_div {

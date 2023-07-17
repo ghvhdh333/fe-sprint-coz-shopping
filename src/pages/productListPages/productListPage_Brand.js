@@ -1,7 +1,7 @@
 import Brand from "../../components/itemBox/brand"
 import React, { useState, useEffect } from "react"
 import Filter from "../../components/filter/filter"
-import "./productListPages.css"
+import "../pages.css"
 
 export default function ProductListPage_Brand () {
     // 상품 리스트 상태와 상태 업데이트 함수
@@ -21,12 +21,11 @@ export default function ProductListPage_Brand () {
     }, [])  // [] <- 첫 렌더링에만 useEffect가 실행된다.
 
     return (
-        <main className="main">
+        <main className="main_productListPages">
             <Filter />
-            productListPage_Brand
             <article >
                 <section className="item_list_section">
-                    <ul className="item_list_container">
+                    <ul className="item_list_container_productListPages">
                         {productList.map((el) => {
                             if(el.type ==='Brand'){
                                 return <li className="item"> 

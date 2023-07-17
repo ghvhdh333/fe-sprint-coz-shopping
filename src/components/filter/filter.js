@@ -11,9 +11,6 @@ import './filter.css';
 
 export default function Filter () {
     return (
-        // filter 이미지 액박표시 뜨는 것 어떻게 처리하는지 모르겠음 ㅠㅠ..
-        // filter Link로 /productList?type=product 이런식으로 하고 싶은데 하는 방법을 모르겠음 저렇게하면 연결이안됨..
-
         // 전체 상품 중 선택한 데이터만 보여준다.
         <nav>
             <section className='filter_container'>

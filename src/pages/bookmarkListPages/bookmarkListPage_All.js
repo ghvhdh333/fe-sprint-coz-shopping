@@ -1,5 +1,5 @@
 import Product from "../../components/itemBox/product"
-import "./bookmarkListPage_All.css"
+import "../pages.css"
 import React, { useState, useEffect } from "react"
 
 export default function BookmarkListPage () {
@@ -23,17 +23,19 @@ export default function BookmarkListPage () {
     }, [])  // [] <- 첫 렌더링에만 useEffect가 실행된다.
 
     return (
-        <main className="main">
-            bookmarkListPage 구현 중
+        <main className="main_bookmarkListPages">
+            <h1>bookmarkListPages 구현 중</h1>
+            <h2>example</h2>
             <article >
                 <section className="item_list_section">
-                    <h2 className="item_list_title">북마크 리스트</h2>
-                    <ul className="item_list_container">
-                        <li>{productList.map((el, index) => {
+                    <ul className="item_list_container_bookmarkListPages">
+                        {productList.map((el) => {
                             if(el.type ==='Product'){
-                                return <Product key={el.id} title={el.title} image_url={el.image_url} price={el.price} discountPercentage={el.discountPercentage}></Product>
+                                return <li>
+                                        <Product key={el.id} title={el.title} image_url={el.image_url} price={el.price} discountPercentage={el.discountPercentage}></Product>
+                                </li>
                             }
-                        })}</li>
+                        })}
                     </ul>
                 </section>
             </article>

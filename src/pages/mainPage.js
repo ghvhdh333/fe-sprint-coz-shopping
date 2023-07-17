@@ -4,7 +4,7 @@ import Exhibition from "../components/itemBox/exhibition"
 import Brand from "../components/itemBox/brand"
 
 import React, { useState, useEffect } from "react"
-import "./mainPage.css"
+import "./pages.css"
 
 export default function MainPage () {
     // 상품 리스트 상태와 상태 업데이트 함수
@@ -14,7 +14,7 @@ export default function MainPage () {
     // 서버에서 데이터 받아오기 (o)
     // api를 통해 카테고리별로 나눈다. (x), 나중에 구현해보기
 
-    // 4개의 데이터만 불러온다.    
+    // 4개의 데이터만 불러온다.
     useEffect(() => {
         let URL = 'http://cozshopping.codestates-seb.link/api/v1/products?count=4'
         
@@ -27,12 +27,11 @@ export default function MainPage () {
         // URL에 get 요청을 보냈지만 성공적으로 데이터를 가져오지 못한 경우 Error를 발생시킨다.
         .catch(error => console.log('Internet Server Error', error))
     }, [])  // [] <- 첫 렌더링에만 useEffect가 실행된다.
-
+    
+    {/* // App => Main => useState (상태 생성) => useEffect => render(return) => 빈 배열 렌더링 => fetch  => 데이터를 받아옴 => useState의 상태 갱신 함수 setProduct(데이터) => 상태 데이터가 바뀌었네? 
+=> 컴포넌트를 재렌더링 => products들이 보임 */}
     return (
         <main className="main">
-                {/* // App => Main => useState (상태 생성) => useEffect => render(return) => 빈 배열 렌더링 => fetch  => 데이터를 받아옴 => useState의 상태 갱신 함수 setProduct(데이터) => 상태 데이터가 바뀌었네? 
-                => 컴포넌트를 재렌더링 => products들이 보임 */}
-
             <article >
                 <section className="item_list_section">
                     <h2 className="item_list_title">상품 리스트</h2>
@@ -42,17 +41,17 @@ export default function MainPage () {
                             if(el.type ==='Product'){
                                 return <li>
                                     <Product key={el.id} title={el.title} image_url={el.image_url} price={el.price} discountPercentage={el.discountPercentage} />
-                                    </li>
+                                </li>
                             }    
                             else if (el.type === 'Category'){
                                 return <li>
                                     <Category key={el.id} title={el.title} image_url={el.image_url}/>
-                                    </li>
+                                </li>
                             }
                             else if (el.type === 'Exhibition'){
                                 return <li>
                                     <Exhibition key={el.id} title={el.title} sub_title={el.sub_title} image_url={el.image_url}/>
-                                    </li>
+                                </li>
                             }
                             else {
                                 return <li>
