@@ -1,0 +1,35 @@
+/* mainPage, productListPages, bookmarkListPages 전부 관리하는 CSS 속성 */
+
+.main {
+    /* 배경색 나중에 삭제하기 */
+    /* background-color: yellow; */
+    margin: 24px 76px;
+}
+
+/* productListPages와 bookmarkListPages에 적용해야함 */
+.main_productListPages, .main_bookmarkListPages {
+    /* 배경색 나중에 삭제하기 */
+    /* background-color: yellow; */
+    margin: 24px 76px 12px 76px;
+}
+
+.item_list_section {
+    margin-bottom: 12px;
+}
+
+.item_list_title {
+    padding-bottom: 12px;
+}
+
+/* productListPages와 bookmarkListPages에 적용해야함 */
+.item_list_container, .item_list_container_productListPages, .item_list_container_bookmarkListPages {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;  /* 피그마에서는 아이템 사이에 24px 간격으로 되어 있다. */
+    align-items: center;
+}
+
+.item_list_container_productListPages, .item_list_container_bookmarkListPages {
+    /* 아이템들이 행이나 열에 가득차면 다음줄로 넘긴다. (default value = nowrap) */
+    flex-wrap: wrap;
+}

@@ -5,7 +5,7 @@ import Brand from "../../components/itemBox/brand"
 
 import React, { useState, useEffect } from "react"
 import Filter from "../../components/filter/filter"
-import "./productListPages.css"
+import "../pages.css"
 
 export default function ProductListPage_All () {
     // 상품 리스트 상태와 상태 업데이트 함수
@@ -28,31 +28,29 @@ export default function ProductListPage_All () {
     }, [])  // [] <- 첫 렌더링에만 useEffect가 실행된다.
 
     return (
-        <main className="main">
+        <main className="main_productListPages">
             <Filter />
             <article >
                 <section className="item_list_section">
-                    <ul className="item_list_container">
-                        <ul className="item_list_container">
-                            {/* 각 컴포넌트에 props를 내려준다. */}
-                            {productList.map(el => {
-                                if(el.type ==='Product'){
-                                    return <li><Product key={el.id} title={el.title} image_url={el.image_url} price={el.price} discountPercentage={el.discountPercentage} /></li>
-                                }    
-                                else if (el.type === 'Category'){
-                                    return <li><Category key={el.id} title={el.title} image_url={el.image_url}/></li>
-                                }
-                                else if (el.type === 'Exhibition'){
-                                    return <li><Exhibition key={el.id} title={el.title} sub_title={el.sub_title} image_url={el.image_url}/></li>
-                                }
-                                else {
-                                    return <li>
-                                        <Brand key={el.id} brand_name={el.brand_name} image_url={el.brand_image_url} follower={el.follower}/>
-                                    </li>
-                                }
-                            })}
-                        </ul>    
-                    </ul>
+                    <ul className="item_list_container_productListPages">
+                        {/* 각 컴포넌트에 props를 내려준다. */}
+                        {productList.map(el => {
+                            if(el.type ==='Product'){
+                                 return <li><Product key={el.id} title={el.title} image_url={el.image_url} price={el.price} discountPercentage={el.discountPercentage} /></li>
+                            }    
+                            else if (el.type === 'Category'){
+                                return <li><Category key={el.id} title={el.title} image_url={el.image_url}/></li>
+                            }
+                            else if (el.type === 'Exhibition'){
+                                return <li><Exhibition key={el.id} title={el.title} sub_title={el.sub_title} image_url={el.image_url}/></li>
+                             }
+                            else {
+                                return <li>
+                                    <Brand key={el.id} brand_name={el.brand_name} image_url={el.brand_image_url} follower={el.follower}/>
+                                </li>
+                            }
+                        })}
+                    </ul>    
                 </section>
             </article>
         </main>
