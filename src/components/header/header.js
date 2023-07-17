@@ -1,7 +1,7 @@
-import Dropdown from "./dropdown"
+import Dropdown from "./dropdown/dropdown"
 import "./header.css"
 import { Link } from "react-router-dom"
-import MainPage from "../pages/mainPage"
+import MainPage from "../../pages/mainPage"
 import { useState } from "react"
 
 export default function Header () {

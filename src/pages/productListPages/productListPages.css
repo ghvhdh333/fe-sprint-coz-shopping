@@ -1,6 +1,6 @@
 .main {
     background-color: yellow;  /* 배경색 나중에 삭제할 것 */
-    margin: 24px 76px;
+    margin: 24px 76px 12px 76px;
 }
 
 .item_list_section {
@@ -15,5 +15,7 @@
     list-style: none;
     display: flex;
     justify-content: space-between;  /* 피그마에서는 아이템 사이에 24px 간격으로 되어 있다. */
-    align-items: center;
+    
+    /* 아이템들이 행이나 열에 가득차면 다음줄로 넘긴다. (default value = nowrap) */
+    flex-wrap: wrap;
 }

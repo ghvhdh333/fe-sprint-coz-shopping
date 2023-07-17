@@ -1,13 +1,11 @@
-import Product from "../components/itemBox/product"
-import "./bookmarkListPage.css"
+import Exhibition from "../../components/itemBox/exhibition"
 import React, { useState, useEffect } from "react"
+import Filter from "../../components/filter/filter"
+import "./productListPages.css"
 
-export default function BookmarkListPage () {
+export default function ProductListPage_Exhibition () {
     // 상품 리스트 상태와 상태 업데이트 함수
     const [productList, setProductList] = useState([])
-    
-    // 서버에서 데이터 받아오기 (o)
-    // api를 통해 카테고리별로 나눈다. (x), 나중에 구현해보기
     
     useEffect(() => {
         let URL = 'http://cozshopping.codestates-seb.link/api/v1/products'
@@ -24,19 +22,23 @@ export default function BookmarkListPage () {
 
     return (
         <main className="main">
-            bookmarkListPage 구현 중
+            <Filter />
+            productListPage_Exhibition
             <article >
                 <section className="item_list_section">
-                    <h2 className="item_list_title">북마크 리스트</h2>
                     <ul className="item_list_container">
-                        <li>{productList.map((el, index) => {
-                            if(el.type ==='Product'){
-                                return <Product key={el.id} title={el.title} image_url={el.image_url} price={el.price} discountPercentage={el.discountPercentage}></Product>
+                        {productList.map((el) => {
+                            if(el.type ==='Exhibition'){
+                                return <li className="item"> 
+                                        <Exhibition key={el.id} title={el.title} sub_title={el.sub_title} image_url={el.image_url} />
+                                </li>
                             }
-                        })}</li>
+                        })}
                     </ul>
                 </section>
             </article>
         </main>
     )
 }
+
+// {"id":41,"type":"Exhibition","title":"소중한 내 차를 위해","sub_title":"차량 용품 전문관","brand_name":null,"price":null,"discountPercentage":null,"image_url":"https://images.unsplash.com/photo-1546614042-7df3c24c9e5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80","brand_image_url":null,"follower":null},
