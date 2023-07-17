@@ -9,3 +9,8 @@ a {
     text-decoration: none;
     color: black;
 }
+
+/* 모든 li 태그의 앞에 찍히는 점을 없앤다. */
+li {
+    list-style: none;
+}

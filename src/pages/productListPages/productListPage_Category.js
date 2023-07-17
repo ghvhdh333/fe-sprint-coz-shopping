@@ -1,13 +1,11 @@
-import Product from "../components/itemBox/product"
+import Category from "../../components/itemBox/category"
 import React, { useState, useEffect } from "react"
-import "./productListPage.css"
+import Filter from "../../components/filter/filter"
+import "./productListPages.css"
 
-export default function ProductListPage () {
+export default function ProductListPage_Category () {
     // 상품 리스트 상태와 상태 업데이트 함수
     const [productList, setProductList] = useState([])
-    
-    // 서버에서 데이터 받아오기 (o)
-    // api를 통해 카테고리별로 나눈다. (x), 나중에 구현해보기
     
     useEffect(() => {
         let URL = 'http://cozshopping.codestates-seb.link/api/v1/products'
@@ -24,16 +22,18 @@ export default function ProductListPage () {
 
     return (
         <main className="main">
-            전체 productList page 구현 중
+            <Filter />
+            productListPage_Category
             <article >
                 <section className="item_list_section">
-                    <h2 className="item_list_title">상품 리스트</h2>
                     <ul className="item_list_container">
-                        <li>{productList.map((el, index) => {
-                            if(el.type ==='Product'){
-                                return <Product key={el.id} title={el.title} image_url={el.image_url} price={el.price} discountPercentage={el.discountPercentage}></Product>
+                        {productList.map((el) => {
+                            if (el.type === 'Category'){
+                                return <li>
+                                    <Category key={el.id} title={el.title} image_url={el.image_url}/>
+                                </li>
                             }
-                        })}</li>
+                        })}
                     </ul>
                 </section>
             </article>

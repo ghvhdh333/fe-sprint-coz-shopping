@@ -1,0 +1,33 @@
+.filter_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.filter_item, .filter_item_brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24px;
+}
+
+.filter_item_brand {
+    margin-right: 0px;
+}
+
+.filter_item_img {
+    width: 82px;
+    height: 82px;
+    margin-bottom: 6.5px;
+}
+
+.filter_strong_font {
+    font-size: 16px;
+    font-weight: 700;
+    color: #412DD4;
+
+    border-bottom: 3px solid #412DD4;
+    
+}

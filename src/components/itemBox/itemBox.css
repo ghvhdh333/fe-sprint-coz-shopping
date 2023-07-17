@@ -3,6 +3,7 @@
     width: 264px;
     height: 264px;
     border-radius: 12px;
+    margin-bottom: 12px;   /* 이거는 삭제 하면 안됨 */
 }
 
 .item_img_div {
