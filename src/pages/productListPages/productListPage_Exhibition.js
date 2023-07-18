@@ -28,8 +28,8 @@ export default function ProductListPage_Exhibition () {
                     <ul className="item_list_container_productListPages">
                         {productList.map((el) => {
                             if(el.type ==='Exhibition'){
-                                return <li className="item"> 
-                                        <Exhibition key={el.id} title={el.title} sub_title={el.sub_title} image_url={el.image_url} />
+                                return <li key={el.id}> 
+                                        <Exhibition title={el.title} sub_title={el.sub_title} image_url={el.image_url} />
                                 </li>
                             }
                         })}

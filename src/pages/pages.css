@@ -26,7 +26,7 @@
     list-style: none;
     display: flex;
     justify-content: space-between;  /* 피그마에서는 아이템 사이에 24px 간격으로 되어 있다. */
-    align-items: center;
+    align-items: start;
 }
 
 .item_list_container_productListPages, .item_list_container_bookmarkListPages {

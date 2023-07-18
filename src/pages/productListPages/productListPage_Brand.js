@@ -28,8 +28,8 @@ export default function ProductListPage_Brand () {
                     <ul className="item_list_container_productListPages">
                         {productList.map((el) => {
                             if(el.type ==='Brand'){
-                                return <li className="item"> 
-                                        <Brand key={el.id} brand_name={el.brand_name} image_url={el.brand_image_url} follower={el.follower}/>
+                                return <li key={el.id}> 
+                                        <Brand brand_name={el.brand_name} image_url={el.brand_image_url} follower={el.follower}/>
                                 </li>
                             }
                         })}

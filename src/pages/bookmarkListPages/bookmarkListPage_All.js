@@ -31,8 +31,8 @@ export default function BookmarkListPage () {
                     <ul className="item_list_container_bookmarkListPages">
                         {productList.map((el) => {
                             if(el.type ==='Product'){
-                                return <li>
-                                        <Product key={el.id} title={el.title} image_url={el.image_url} price={el.price} discountPercentage={el.discountPercentage}></Product>
+                                return <li key={el.id}>
+                                        <Product title={el.title} image_url={el.image_url} price={el.price} discountPercentage={el.discountPercentage}></Product>
                                 </li>
                             }
                         })}
