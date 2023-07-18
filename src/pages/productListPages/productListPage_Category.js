@@ -28,8 +28,8 @@ export default function ProductListPage_Category () {
                     <ul className="item_list_container_productListPages">
                         {productList.map((el) => {
                             if (el.type === 'Category'){
-                                return <li>
-                                    <Category key={el.id} title={el.title} image_url={el.image_url}/>
+                                return <li key={el.id}>
+                                    <Category title={el.title} image_url={el.image_url}/>
                                 </li>
                             }
                         })}

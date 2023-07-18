@@ -36,17 +36,23 @@ export default function ProductListPage_All () {
                         {/* 각 컴포넌트에 props를 내려준다. */}
                         {productList.map(el => {
                             if(el.type ==='Product'){
-                                 return <li><Product key={el.id} title={el.title} image_url={el.image_url} price={el.price} discountPercentage={el.discountPercentage} /></li>
+                                 return <li key={el.id}>
+                                    <Product title={el.title} image_url={el.image_url} price={el.price} discountPercentage={el.discountPercentage} />
+                                </li>
                             }    
                             else if (el.type === 'Category'){
-                                return <li><Category key={el.id} title={el.title} image_url={el.image_url}/></li>
+                                return <li key={el.id}>
+                                    <Category title={el.title} image_url={el.image_url}/>
+                                </li>
                             }
                             else if (el.type === 'Exhibition'){
-                                return <li><Exhibition key={el.id} title={el.title} sub_title={el.sub_title} image_url={el.image_url}/></li>
+                                return <li key={el.id}>
+                                    <Exhibition title={el.title} sub_title={el.sub_title} image_url={el.image_url}/>
+                                </li>
                              }
                             else {
-                                return <li>
-                                    <Brand key={el.id} brand_name={el.brand_name} image_url={el.brand_image_url} follower={el.follower}/>
+                                return <li key={el.id}>
+                                    <Brand brand_name={el.brand_name} image_url={el.brand_image_url} follower={el.follower}/>
                                 </li>
                             }
                         })}
